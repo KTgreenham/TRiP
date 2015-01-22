@@ -1,5 +1,6 @@
 #TRiP
-##Tracking Rhythms in Plants: A motion detection algorithm for estimating circadian period from leaf movement data
+##Tracking Rhythms in Plants: 
+###A motion detection algorithm for estimating circadian period from leaf movement data
 
 ###Table of Contents:
 1. [Introduction to TRiP](#intro)

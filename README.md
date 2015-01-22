@@ -4,14 +4,14 @@
 ###Table of Contents:
 1. [Introduction to TRiP](#intro)
 2. [TRiP Contents](#contents)
-2. [Description of TRiP Functions](#desc)
-3. [TRiP for Octave](#octave)
+3. [Description of TRiP Functions](#desc)
+4. [TRiP for Octave](#octave)
 
 
 ####<a id="intro"></a>1. Introduction to TRiP
 TRiP is a matlab-based program for estimating circadian period from whole plant image data. TRiP includes a grid-based cropping function that takes each image stack as input and crops the images using grid coordinates to output image stacks for each plant. A motion estimation algorithm is applied to the image stacks and outputs a motion vector for each image over time. The motion vectors are used to estimate circadian period using a single frequency FFT-NLLS method. 
 
-####<a id="contents"></a>1. TRiP Contents 
+####<a id="contents"></a>2. TRiP Contents 
 
 Within the TRiP folder are 3 directories: code/ input/ output/
 
@@ -29,7 +29,7 @@ Also within code/ is the README.txt file, the testdata.txt file required for the
 
 The input directory contains 379 images of 9 plants that were imaged every 20 min. 
 
-####<a id="desc"></a>2. Description of TRiP Functions
+####<a id="desc"></a>3. Description of TRiP Functions
 
 * Make a .txt file containing the cropping coordinates for each image stack including the name of the subdirectory for each image (see testdata.txt for an example). Put the image stack files into the input directory. 
 

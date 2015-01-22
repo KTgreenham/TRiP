@@ -25,7 +25,7 @@ The code directory contains the TRiP functions:
 * modelFitAll.m
 * space_time_deriv.m
 
-Also within code/ is the README.txt file, the testdata.txt file required for the cropAll function described below. 
+Also within code/ is the README.txt file and the testdata.txt file required for the cropAll function described below.
 
 The input directory contains 379 images of 9 plants that were imaged every 20 min. 
 

@@ -26,7 +26,7 @@ Also within code/ is the README.txt file and the testdata.txt file required for 
 
 The input directory contains 379 images of 9 plants that were imaged every 20 min. 
 
-####<a id="desc"></a>2. How to run TRiP
+####<a id="desc"></a>2. Description of TRiP functions
 
 * Make a .txt file containing the cropping coordinates for each image stack including the name of the subdirectory for each image (see testdata.txt for an example). Put the image stack files into the input directory. 
 

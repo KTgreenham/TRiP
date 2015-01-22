@@ -12,7 +12,7 @@ The code directory contains the TRiP functions:
 * estimateAll.m
 * estimateMotion.m
 * evaluateModel.m
-* modelFit.m
+* modelFitAll.m
 * space_time_deriv.m
 
 Also within code/ is the README.txt file and the testdata.txt file required for the cropAll function described below. 
@@ -41,7 +41,7 @@ imC = im(y3:y4,x3:x4, :);
 
 3. run estimateAll which will generate a .csv file for each <subdir> in input. This csv files contains a single column of the vertical motion over time.
 
-4. run modelFit passing in as input a single .csv file (../input/<subdir>/<fn.csv>). This will create a .txt and .png file with the results of model fitting (the frequency of the estimated motion). 
+4. run modelFitAll passing in as input all .csv files ('../output/*.csv'). This will create a .txt and .png file with the results of model fitting (the frequency of the estimated motion). 
 
 #####3. RUNNING TRiP ON SAMPLE DATA
 
@@ -59,11 +59,11 @@ Provided in the input/ directory is a test set of images from 9 col-0 plants ima
 
 6. when estimateAll is done, you should see 9 .csv files and 9 .png files in TRiP/ouput. Each .csv file contains the motion trace over time, and each .png file contains a plot of this motion trace over time.
 
-7. at the matlab prompt: modelfit(‘../output/*.csv’);
+7. at the matlab prompt: modelfitAll(‘../output/*.csv’);
 
-8. when modelFit is done, you should see Plant1_model.txt and Plant1_model.png for all 9 plants in TRiP/ouput. These contain the results of fitting a single harmonic to the motion trace.
+8. when modelFitAll is done, you should see Plant1_model.txt and Plant1_model.png for all 9 plants in TRiP/ouput. These contain the results of fitting a single harmonic to the motion trace.
 
-NOTE: the output of modelFit is frequency, not period. We have not included the calculation for period because it depends on the time-series resolution. To calculate period from frequency, use the following equation:
+NOTE: the output of modelFitAll is frequency, not period. We have not included the calculation for period because it depends on the time-series resolution. To calculate period from frequency, use the following equation:
 
 ```
 T = No. of frames/frequence

@@ -24,7 +24,10 @@ The code directory contains the TRiP functions:
 * estimateMotion.m
 * evaluateModel.m
 * modelFitAll.m
+* README.txt
+* screen_shot_matlab.pptx
 * space_time_deriv.m
+* testdata.txt
 
 Also within code/ is the README.txt file and the testdata.txt file required for the cropAll function described below. 
 

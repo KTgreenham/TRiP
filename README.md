@@ -86,30 +86,30 @@ NOTE: We have provided a .pptx file ('screen_shot_matlab.pptx') showing screen s
 
 NOTE: Running TRiP on Octave requires some modification to the code. We have only tested this modified code on Octave-GUI 3.8 (binary installation) run on a Mac OS X Maverick. Currently we have not found an Octave equivalent function for our ModelFit optimization step. We recommend Octave users to take the motion vectors from the EstimateAll '.csv' output files and use other available circadian period estimation platforms (ie. Biodare). We will continue to work on a modelFit code for Octave. 
 
-1. The following Octave packages and their dependencies should be installed and loaded prior to running TRiP:
+* The following Octave packages and their dependencies should be installed and loaded prior to running TRiP:
 ```
 image
 optim
 ```
-2. The estimateAll step is much slower in Octave but does produce the same motion vector output.
-3. the matlab function 'getframe' is not available in Octave so there will be no '.png' files output with the plots. We are working on implementing an Octave equivalent function but at this time the user will have to generate the plot manually.
+* The estimateAll step is much slower in Octave but does produce the same motion vector output.
+* the matlab function 'getframe' is not available in Octave so there will be no '.png' files output with the plots. We are working on implementing an Octave equivalent function but at this time the user will have to generate the plot manually.
 
 #####5. RUNNING TRiP ON OCTAVE
-1. Open Octave
-2. In the file browser window, change directories to TRiP/code
-3. In the Octave command window:
+* Open Octave
+* In the file browser window, change directories to TRiP/code
+* In the Octave command window:
 ```
 pkg load image
 pkg load optim
 ```
-4. In the Octave command window:
+* In the Octave command window:
 ```
 cropAll('testdata.txt');
 ```
-5. When cropAll is complete, you should see 9 folders in TRiP/input. Each of these folders should contain 379 frames of a single plant.
-6. In the command window:
+* When cropAll is complete, you should see 9 folders in TRiP/input. Each of these folders should contain 379 frames of a single plant.
+* In the command window:
 ```
 EstimateAll;
 ```
-7. When estimateAll is complete, you should see 9 .csv files in TRiP/output. Each .csv file contains the motion vectors over time.
-8. The motion vectors are the input to the circadian period estimation method of choice. 
+* When estimateAll is complete, you should see 9 .csv files in TRiP/output. Each .csv file contains the motion vectors over time.
+* The motion vectors are the input to the circadian period estimation method of choice. 

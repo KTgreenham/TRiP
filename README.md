@@ -2,13 +2,13 @@
 ##Tracking Rhythms in Plants: A motion detection algorithm for estimating circadian period from leaf movement data
 
 ###Table of Contents:
-1. Contents of TRiP.zip
+1. [Contents of TRiP.zip](#contents)
 2. Description of TRiP functions
 3. Running TRiP on sample data
 4. TRiP for Octave
 5. Running TRiP on Octave
 
-####1. Contents of TRiP.zip 
+####<a id="contents"></a>1. Contents of TRiP.zip 
 
 Within the TRiP folder are 3 directories: code/ input/ output/
 

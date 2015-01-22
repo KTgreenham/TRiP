@@ -3,10 +3,10 @@
 
 ###Table of Contents:
 1. [Contents of TRiP.zip](#contents)
-2. Description of TRiP functions
-3. Running TRiP on sample data
-4. TRiP for Octave
-5. Running TRiP on Octave
+2. [Description of TRiP functions](#desc)
+3. [Running TRiP on sample data](#data)
+4. [TRiP for Octave](#octave)
+5. [Running TRiP on Octave](#runOc)
 
 ####<a id="contents"></a>1. Contents of TRiP.zip 
 
@@ -26,7 +26,7 @@ Also within code/ is the README.txt file and the testdata.txt file required for 
 
 The input directory contains 379 images of 9 plants that were imaged every 20 min. 
 
-####2. How to run TRiP
+####<a id="desc"></a>2. How to run TRiP
 
 * Make a .txt file containing the cropping coordinates for each image stack including the name of the subdirectory for each image (see testdata.txt for an example). Put the image stack files into the input directory. 
 
@@ -50,7 +50,7 @@ imC = im(y3:y4,x3:x4, :);
 
 * run modelFitAll passing in as input all .csv files ('../output/*.csv'). This will create a .txt and .png file with the results of model fitting (the frequency of the estimated motion). 
 
-####3. Running TRiP on sample data
+####<a id="data"></a>3. Running TRiP on sample data
 
 Provided in the input/ directory is a test set of images from 9 col-0 plants imaged every 20 min.
 
@@ -89,7 +89,7 @@ P = 25.3
 ```
 NOTE: We have provided a .pptx file ('screen_shot_matlab.pptx') showing screen shots of each step. We have tested TRiP on MAtlab_2014a for MacOS X and Windows.
 
-####4. TRiP for Octave
+####<a id="octave"></a>4. TRiP for Octave
 
 NOTE: Running TRiP on Octave requires some modification to the code. We have only tested this modified code on Octave-GUI 3.8 (binary installation) run on a Mac OS X Maverick. Currently we have not found an Octave equivalent function for our ModelFit optimization step. We recommend Octave users to take the motion vectors from the EstimateAll '.csv' output files and use other available circadian period estimation platforms (ie. Biodare). We will continue to work on a modelFit code for Octave. 
 
@@ -101,7 +101,7 @@ optim
 * The estimateAll step is much slower in Octave but does produce the same motion vector output.
 * the matlab function 'getframe' is not available in Octave so there will be no '.png' files output with the plots. We are working on implementing an Octave equivalent function but at this time the user will have to generate the plot manually.
 
-#####5. RUNNING TRiP ON OCTAVE
+#####<a id="runOc"></a>5. Running TRiP on Octave
 * Open Octave
 * In the file browser window, change directories to TRiP/code
 * In the Octave command window:

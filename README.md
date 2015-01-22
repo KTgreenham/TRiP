@@ -3,16 +3,16 @@
 
 ###Table of Contents:
 1. [Introduction to TRiP](#intro)
-2. [Contents of TRiP.zip](#contents)
-2. [Description of TRiP functions](#desc)
-3. [Running TRiP on sample data](#data)
+2. [TRiP Contents](#contents)
+2. [Description of TRiP Functions](#desc)
+3. [Running TRiP on Sample Data](#data)
 4. [TRiP for Octave](#octave)
 5. [Running TRiP on Octave](#runOc)
 
 ####<a id="intro"></a>1. Introduction to TRiP
 TRiP is a matlab-based program for estimating circadian period from whole plant image data. TRiP includes a grid-based cropping function that takes each image stack as input and crops the images using grid coordinates to output image stacks for each plant. A motion estimation algorithm is applied to the image stacks and outputs a motion vector for each image over time. The motion vectors are used to estimate circadian period using a single frequency FFT-NLLS method. 
 
-####<a id="contents"></a>1. Contents of TRiP.zip 
+####<a id="contents"></a>1. TRiP Contents 
 
 Within the TRiP folder are 3 directories: code/ input/ output/
 
@@ -30,7 +30,7 @@ Also within code/ is the README.txt file and the testdata.txt file required for 
 
 The input directory contains 379 images of 9 plants that were imaged every 20 min. 
 
-####<a id="desc"></a>2. Description of TRiP functions
+####<a id="desc"></a>2. Description of TRiP Functions
 
 * Make a .txt file containing the cropping coordinates for each image stack including the name of the subdirectory for each image (see testdata.txt for an example). Put the image stack files into the input directory. 
 
@@ -54,7 +54,7 @@ imC = im(y3:y4,x3:x4, :);
 
 * run modelFitAll passing in as input all .csv files ('../output/*.csv'). This will create a .txt and .png file with the results of model fitting (the frequency of the estimated motion). 
 
-####<a id="data"></a>3. Running TRiP on sample data
+####<a id="data"></a>3. Running TRiP on Sample Data
 
 Provided in the input/ directory is a test set of images from 9 col-0 plants imaged every 20 min.
 
@@ -81,7 +81,7 @@ modelfitAll('../output/*.csv');
 NOTE: the output of modelFitAll is frequency, not period. We have not included the calculation for period because it depends on the time-series resolution. To calculate period from frequency, use the following equation:
 
 ```
-T = No. of frames/frequence
+T = No. of frames/frequency
 Period = T/No. of images per hour
 ```
 Example:

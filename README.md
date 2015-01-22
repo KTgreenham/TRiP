@@ -49,7 +49,7 @@ In addition, replace line 64 with:
 imC = im(y3:y4,x3:x4, :);
 ```
 
-* run estimateAll which will generate a .csv file for each <subdir> in input. This csv files contains a single column of the vertical motion over time.
+* run estimateAll which will generate a .csv file for each <subdir> in output/. These .csv files contain a single column of the vertical motion as a function of time.
 
 * run modelFitAll passing in as input all .csv files ('../output/*.csv'). This will create a .txt and .png file with the results of model fitting (the frequency of the estimated motion). 
 

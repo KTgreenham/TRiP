@@ -2,11 +2,15 @@
 ##Tracking Rhythms in Plants: A motion detection algorithm for estimating circadian period from leaf movement data
 
 ###Table of Contents:
-1. [Contents of TRiP.zip](#contents)
+1. [Introduction to TRiP](#intro)
+2. [Contents of TRiP.zip](#contents)
 2. [Description of TRiP functions](#desc)
 3. [Running TRiP on sample data](#data)
 4. [TRiP for Octave](#octave)
 5. [Running TRiP on Octave](#runOc)
+
+####<a id="intro"></a>1. Introduction to TRiP
+TRiP is a matlab-based program for estimating circadian period from whole plant image data. TRiP includes a grid-based cropping function that takes each image stack as input and crops the images using grid coordinates to output image stacks for each plant. A motion estimation algorithm is applied to the image stacks and outputs a motion vector for each image over time. The motion vectors are used to estimate circadian period using a single frequency FFT-NLLS method. 
 
 ####<a id="contents"></a>1. Contents of TRiP.zip 
 

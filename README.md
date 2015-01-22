@@ -51,16 +51,20 @@ Provided in the input/ directory is a test set of images from 9 col-0 plants ima
 
 2. change directories to TRiP/code
 
-3. at the matlab prompt: cropAll(’testdata.txt’);
-
+3. at the matlab prompt: 
+```
+cropAll(’testdata.txt’);
+```
 4. when cropAll is done, you should see 9 folders in TRiP/input. Each of these folders contains 379 frames of a single plant.
-
-5. at the matlab prompt: estimateAll;
-
+5. at the matlab prompt: 
+```
+estimateAll;
+```
 6. when estimateAll is done, you should see 9 .csv files and 9 .png files in TRiP/ouput. Each .csv file contains the motion trace over time, and each .png file contains a plot of this motion trace over time.
-
-7. at the matlab prompt: modelfitAll(‘../output/*.csv’);
-
+7. at the matlab prompt: 
+```
+modelfitAll(‘../output/*.csv’);
+```
 8. when modelFitAll is done, you should see Plant1_model.txt and Plant1_model.png for all 9 plants in TRiP/ouput. These contain the results of fitting a single harmonic to the motion trace.
 
 NOTE: the output of modelFitAll is frequency, not period. We have not included the calculation for period because it depends on the time-series resolution. To calculate period from frequency, use the following equation:
@@ -78,3 +82,34 @@ P = 25.3
 ```
 NOTE: We have provided a .pptx file ('screen_shot_matlab.pptx') showing screen shots of each step. We have tested TRiP on MAtlab_2014a for MacOS X and Windows.
 
+#####4. TRiP ON OCTAVE
+
+NOTE: Running TRiP on Octave requires some modification to the code. We have only tested this modified code on Octave-GUI 3.8 (binary installation) run on a Mac OS X Maverick. Currently we have not found an Octave equivalent function for our ModelFit optimization step. We recommend Octave users to take the motion vectors from the EstimateAll '.csv' output files and use other available circadian period estimation platforms (ie. Biodare). We will continue to work on a modelFit code for Octave. 
+
+1. The following Octave packages and their dependencies should be installed and loaded prior to running TRiP:
+```
+image
+optim
+```
+2. The estimateAll step is much slower in Octave but does produce the same motion vector output.
+3. the matlab function 'getframe' is not available in Octave so there will be no '.png' files output with the plots. We are working on implementing an Octave equivalent function but at this time the user will have to generate the plot manually.
+
+#####5. RUNNING TRiP ON OCTAVE
+1. Open Octave
+2. In the file browser window, change directories to TRiP/code
+3. In the Octave command window:
+```
+pkg load image
+pkg load optim
+```
+4. In the Octave command window:
+```
+cropAll('testdata.txt');
+```
+5. When cropAll is complete, you should see 9 folders in TRiP/input. Each of these folders should contain 379 frames of a single plant.
+6. In the command window:
+```
+EstimateAll;
+```
+7. When estimateAll is complete, you should see 9 .csv files in TRiP/output. Each .csv file contains the motion vectors over time.
+8. The motion vectors are the input to the circadian period estimation method of choice. 

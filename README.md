@@ -24,12 +24,9 @@ The code directory contains the TRiP functions:
 * estimateMotion.m
 * evaluateModel.m
 * modelFitAll.m
-* README.txt
-* screen_shot_matlab.pptx
 * space_time_deriv.m
-* testdata.txt
 
-Also within code/ is the README.txt file and the testdata.txt file required for the cropAll function described below. 
+Also within code/ is the README.txt file, the testdata.txt file required for the cropAll function described below. 
 
 The input directory contains 379 images of 9 plants that were imaged every 20 min. 
 
@@ -94,7 +91,7 @@ T = 360/4.744690
 P = 75.87/3
 P = 25.3
 ```
-NOTE: We have provided a .pptx file ('screen_shot_matlab.pptx') showing screen shots of each step. We have tested TRiP on MAtlab_2014a for MacOS X and Windows.
+NOTE: We have tested TRiP on MAtlab_2014a for MacOS X and Windows.
 
 ####<a id="octave"></a>4. TRiP for Octave
 

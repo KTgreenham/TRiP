@@ -27,7 +27,7 @@ The code directory contains the TRiP functions:
 
 Also within code/ is the README.txt file and the testdata.txt file required for the cropAll function described below.
 
-The input directory contains 379 images of 9 plants that were imaged every 20 min. 
+The input directory contains 379 images of 9 plants that were imaged every 20 min. The README.txt file outlines the analyses of this sample data. Subsequently, the user can replace the sample images with their own image data and run the same command sequence with the directory format provided. 
 
 ####<a id="desc"></a>3. Description of TRiP Functions
 

@@ -1,0 +1,12 @@
+../cropped/crop_plant1	3129 710 58 43
+../cropped/crop_plant2	3128 711 58 43
+../cropped/crop_plant3	3129 711 58 43
+../cropped/crop_plant4	3110 683 96 81
+../cropped/crop_plant5	3111 682 96 81
+../cropped/crop_plant6	3112 683 96 81
+../cropped/crop_plant7	3108 735 96 81
+../cropped/crop_plant8	3109 735 96 81
+../cropped/crop_plant9	3109 734 96 81
+../cropped/crop_plant10	3109 754 96 81
+../cropped/crop_plant11	3108 754 96 81
+../cropped/crop_plant12	3110 754 96 81

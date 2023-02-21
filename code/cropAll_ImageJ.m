@@ -23,9 +23,11 @@ end
 fclose(fd);
 
 % read dirName
-d1 = dir( sprintf( '%s/*.JPG', dirName ) );
-d2 = dir( sprintf( '%s/*.jpg', dirName ) );
-d  = [d1 ; d2];
+% d1 = dir( sprintf( '%s/*.JPG', dirName ) );
+% d2 = dir( sprintf( '%s/*.jpg', dirName ) );
+% d  = [d1 ; d2];
+d = dir( sprintf( '%s/*.JPG', dirName ) );
+
 fprintf( 'Found %d images.\n', numel(d) );
 
 

@@ -1,17 +1,17 @@
 % This is a single script that runs TRiP.
 % 
 
-% Create folders if they don't exist
+%% Create folders if they don't exist
 mkdir '../cropped'
 mkdir '../output'
 
-% Crop images
+%% Crop images
 cropAll_ImageJ( '../input', 'crop.txt');
 
-% Estimate motion
+%% Estimate motion
 estimateAll();
 
-% Fit model
+%% Fit model
 modelFitAll_JAN2023();
 
 

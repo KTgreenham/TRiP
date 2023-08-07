@@ -2,9 +2,10 @@
 /cropped
 /test
 /output_comparison
-/.ipynb_checkpoints
+.ipynb_checkpoints
+.DS_Store
 
-/code/PyTRiP_v01_.ipynb
-/code/PyTRiP_v02_.ipynb
-/code/.DS_Store
+/code/PyTRiP/PyTRiP_v01_.ipynb
+/code/PyTRiP/PyTRiP_v02_.ipynb
+/code/PyTRiP/.DS_Store
 /code/.ipynb_checkpoints

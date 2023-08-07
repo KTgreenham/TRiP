@@ -4,8 +4,8 @@
 /output_comparison
 .ipynb_checkpoints
 .DS_Store
-
-/code/PyTRiP/PyTRiP_v01_.ipynb
+code/PyTRiP/PyTRiP_v01_.ipynb
 /code/PyTRiP/PyTRiP_v02_.ipynb
 /code/PyTRiP/.DS_Store
-/code/.ipynb_checkpoints
+/code/.ipynb_checkpoints/
+code/PyTRiP/__pycache__

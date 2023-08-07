@@ -8,14 +8,14 @@ To start using PyTRiP from command line, clone the repository to your local mach
     ```git clone https://github.com/joanmanbar/TRiP.git``` \
 
 Navigate to the `code/PyTRiP` folder in the TRiP directory \
-    ```cd code/PyTRiP/``` \
+    ```cd code/PyTRiP/``` 
 
 Run the program \
-    ```python3 TRiP.py -d <input directory> -e <image extension> -c <txt crop file> -mt <True/False> -m <True/False> -s <start image> -f <final image>``` \
+    ```python3 TRiP.py -d <input directory> -e <image extension> -c <txt crop file> -mt <True/False> -m <True/False> -s <start image> -f <final image>``` 
 
 **Example:**  \
 ```cd PyTRiP/code``` \
-```python3 TRiP.py -d ../../input/ -e JPG -c ../../input/crop_coords.txt -mt True -m True``` \
+```python3 TRiP.py -d ../../input/ -e JPG -c ../../input/crop_coords.txt -mt True -m True``` 
 
 The arguments specify the following: \
     `-d` <input directory> - The directory containing the image stacks to be analyzed \
@@ -24,7 +24,7 @@ The arguments specify the following: \
     `-mt` <True/False> - Whether or not to estimate motion from the cropped stacks \
     `-m` <True/False> - Whether or not to model period from the motion data \
     `-s` <start image> - The first image to start cropping at, i.e., the first frame \
-    `-f`  <final image> - The last image to crop, i.e., the last frame  \
+    `-f`  <final image> - The last image to crop, i.e., the last frame  
 
 
 ## Output

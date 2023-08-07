@@ -5,7 +5,7 @@
 %%%			No fewer than 2 frames, no more than 7.
 %%%
 function[ fx, fy, ft ] = space_time_deriv( f )
-
+% f = f(k:k+(taps-1));
 N	= size( f, 2 );
 dims	= size( f(1).im );
 

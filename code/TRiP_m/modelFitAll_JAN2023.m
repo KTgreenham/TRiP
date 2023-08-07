@@ -34,6 +34,8 @@ for k = 1 : numel(d)
     
     % compute dominant frequency and phase for starting condition
     D = fftshift( fft(dat) );
+%     plot(fft(dat), abs(fft(dat))); grid on
+%     plot(D, abs(fft(D))); grid on
     if( mod(length(dat),2) == 0 )
         mid = length(dat)/2 + 1;
     else
@@ -50,11 +52,11 @@ for k = 1 : numel(d)
     % Got stuck here on 20230206 -Joan
     model  = fminsearch( 'errorFunc', [freq phase amp], [], dat ); % optimize
     
-    % save model fit to ../ouput/fn_model.txt
-    fnout = strrep( fn, '.csv', '_model.txt' );
-    fdout = fopen( fnout, 'w' );
-    fprintf( fdout, '%f\n', model(1) );
-    fclose( fdout );
+    % save model fit to ../ouput/fn_model.txt  [WHY????]
+%     fnout = strrep( fn, '.csv', '_model.txt' );
+%     fdout = fopen( fnout, 'w' );
+%     fprintf( fdout, '%f\n', model(1) );
+%     fclose( fdout );
     
     % plot results
     fnout = strrep( fn, '.csv', '_model.png' );
@@ -63,6 +65,7 @@ for k = 1 : numel(d)
     hold on;
     plot( f, 'r' );
     % the evaluation right below is needed in case model=[0,0,0]
+    model(isnan(model)) = 0;
     if nnz(~model) > 2
         axis( [0 N-1 -1 1] );
     else
@@ -87,11 +90,14 @@ for k = 1 : numel(d)
   	 CTP = (abs(phi)*24)/Period;
 	else
    	CTP = 24 - (phi*24)/Period;
-	end
+    end
+
 
 	%added the function for RAE
 	fun = @evaluateModel;
 	beta0 = [freq;phase;amp];
+    beta0(isnan(beta0)) = 0;
+    dat(isnan(dat)) = 0;
 	%fminsearch results as init
 	[beta,r,J,MSE] = nlinfit(N,dat,fun,beta0);
 	rsq = 1 - sum(r.^2) / sum((dat - mean(dat)).^2);

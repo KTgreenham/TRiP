@@ -5,10 +5,10 @@
 *NOTE*: Requires Python 3.5 or higher.
 
 To start using PyTRiP from command line, clone the repository to your local machine. \
-    ```git clone https://github.com/joanmanbar/TRiP.git``` \
+    ```git clone https://github.com/joanmanbar/TRiP.git``` 
 
-Navigate to the `code/PyTRiP` folder in the TRiP directory \
-    ```cd code/PyTRiP/``` 
+Navigate to the PyTRiP folder \
+    ```cd TRiP/code/PyTRiP/``` 
 
 Run the program \
     ```python3 TRiP.py -d <input directory> -e <image extension> -c <txt crop file> -mt <True/False> -m <True/False> -s <start image> -f <final image>``` 
@@ -20,7 +20,7 @@ Run the program \
 The arguments specify the following: \
     `-d` <input directory> - The directory containing the image stacks to be analyzed \
     `-e` <image extension> - The file extension of the image stacks to be analyzed \
-    `-c` <txt crop file> - (Optional) The text file containing the crop coordinates for each plant in the image stacks \
+    `-c` <txt crop file> - (Optional) The text file containing the plant ID, followed by the four coordinates to crop each plant. **NOTE**: Al five elements must be separated by a single space, and contained in a single column. \
     `-mt` <True/False> - Whether or not to estimate motion from the cropped stacks \
     `-m` <True/False> - Whether or not to model period from the motion data \
     `-s` <start image> - The first image to start cropping at, i.e., the first frame \

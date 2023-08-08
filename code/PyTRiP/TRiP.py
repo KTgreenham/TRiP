@@ -22,10 +22,27 @@ args = parser.parse_args()
 
 # Define the arguments
 images_path = args.img_directory # Path to images to crop, or to cropped images
-img_extension = args.img_extension # Image extension (e.g. JPG, PNG, TIF)
+img_extension = str(args.img_extension) # Image extension (e.g. JPG, PNG, TIF)
 crop_coords = args.crop_coords # Path to file containing crop coordinates
-start_img = args.start_img
-end_img = args.end_img 
+# check if start_img is int
+if args.start_img is not None:
+    try:
+        start_img = int(args.start_img)
+    except ValueError:
+        start_img = None
+        print("start_img must be an integer")
+else:
+    start_img = None
+# check if end_img is int
+if args.end_img is not None:
+    try:
+        end_img = int(args.end_img)
+    except ValueError:
+        end_img = None
+        print("end_img must be an integer")
+else:
+    end_img = None
+
 
 if str(args.motion) == "True":
     motion = True
@@ -38,8 +55,11 @@ else:
 
 
 # Run the functions
-def TRiP(images_path, img_extension, crop_coords, motion, model, start_img, end_img):
+def TRiP():
     start_all = time.time()
+    # Check if images_path exists
+    assert os.path.exists(images_path), "I did not find the file at, "+str(images_path)
+
     if crop_coords is not None:
         start_time = time.time() # start timer
         pt.crop_all(images_path, crop_coords, img_extension, start_img=start_img, end_img=end_img)
@@ -71,7 +91,7 @@ def TRiP(images_path, img_extension, crop_coords, motion, model, start_img, end_
 
 
 if __name__ == "__main__":
-    TRiP(images_path, img_extension, crop_coords, start_img, end_img, motion, model)
+    TRiP()
 
 # Example usage:
 # python3 TRiP.py -d ../../input/ -c ../crop.txt -mt True -m True

@@ -1,3 +1,15 @@
+#!/usr/bin/env python3
+
+
+
+#-----------------------------------------------------#
+#                   PyTRiP
+#-----------------------------------------------------#
+#
+# This .py file contains the definitions to the functions to run TRiP
+#
+#
+#
 
 
 import numpy as np
@@ -16,19 +28,32 @@ import time
 
 
 # Crop images
-def crop_all(images_path, cropfile_path, img_extension, start_img=None, end_img=None):
+def crop_all(images_path, cropfile_path, img_extension, start_img, end_img):
     print("\n-----------------------------------")
     print("CROPPING IMAGES...\n")
     img_extension = '*.' + img_extension
     images = Path(images_path).glob(img_extension)
     images = [str(p) for p in images]
     images.sort()
+    # Check if images were found
+    assert len(images) > 0, f"No images found in {images_path}"
 
     if start_img is not None and end_img is not None:
         images = images[start_img:end_img]
 
     # Read crop file
     crop_coords = pd.read_csv(cropfile_path, sep='\t', header=None)
+    # check that the crop file has only one column
+    assert crop_coords.shape[1] == 1, "Crop file must have only one column"
+    # check that the crop file has at least one row
+    assert crop_coords.shape[0] > 0, "Crop file must have at least one row"
+    # check that all rows have 5 elements separated by a single space
+    assert all(len(i.split(" ")) == 5 for i in crop_coords.iloc[:,0]), "All rows must have 5 elements separated by a single space"
+
+    # print the first 5 rows
+    print(crop_coords.head())
+    # print the number of rows and columns
+    print(crop_coords.shape)
 
     # Create empty lists for ID (key) and value (coordinates)
     keys = []
@@ -40,6 +65,7 @@ def crop_all(images_path, cropfile_path, img_extension, start_img=None, end_img=
         plant_ID = crop_coords.iloc[plant,0] #
         plant_ID = plant_ID.split(" ")[0] # Split by " "; take the first
         keys.append(plant_ID) # Add this to the 'keys' list
+        # print(f"Processing {plant_ID}...")
         # Get coordinates
         coords = crop_coords.iloc[plant,0]
         coords = coords.split(" ")[1:]  # This must change if using \t sep!!

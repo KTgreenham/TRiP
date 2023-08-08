@@ -28,7 +28,7 @@ The arguments specify the following: \
 
 
 ## Output
-An `output` folder withih the clone repository with two subfolders: `motion` and `model`. `motion` contains a csv file per plant with their raw motion data. `model` contains a plot per plant with their fitted model, and a single file (MODELS_DATA.csv) with the plant ID, Period, CTP, Rsquared, and RAE, as columns.
+An `output` folder withih the clone repository with a log file, and two subfolders: `motion` and `model`. `motion` contains a csv file per plant with their raw motion data. `model` contains a plot per plant with their fitted model, and a single file (MODELS_DATA.csv) with the plant ID, Period, CTP, Rsquared, and RAE, as columns.
 
 
 

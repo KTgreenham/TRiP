@@ -2,7 +2,7 @@
 # PyTRiP - a Python version of TRiP
 
 [TRiP](https://plantmethods.biomedcentral.com/articles/10.1186/s13007-015-0075-5) is a program for estimating circadian period from whole plant image data. PyTRiP is an open-source version of the [original TRiP code](https://github.com/KTgreenham/TRiP) written in Matlab. This version was also designed to be more flexible and easier to run. 
-*NOTE*: Requires Python 3.5 or higher.
+**NOTE**: Requires Python 3.5 or higher.
 
 To start using PyTRiP from command line, clone the repository to your local machine. \
     ```git clone https://github.com/joanmanbar/TRiP.git``` 
@@ -20,7 +20,7 @@ Run the program \
 The arguments specify the following: \
     `-d` <input directory> - The directory containing the image stacks to be analyzed \
     `-e` <image extension> - The file extension of the image stacks to be analyzed \
-    `-c` <txt crop file> - (Optional) The text file containing the plant ID, followed by the four coordinates to crop each plant. **NOTE**: Al five elements must be separated by a single space, and contained in a single column. \
+    `-c` <txt crop file> - (Optional) The text file containing the plant ID, followed by the four coordinates to crop each plant. **NOTE**: All five elements must be separated by a single space, and contained in a single column. \
     `-mt` <True/False> - Whether or not to estimate motion from the cropped stacks \
     `-m` <True/False> - Whether or not to model period from the motion data \
     `-s` <start image> - The first image to start cropping at, i.e., the first frame \

@@ -51,9 +51,9 @@ def crop_all(images_path, cropfile_path, img_extension, start_img, end_img):
     assert all(len(i.split(" ")) == 5 for i in crop_coords.iloc[:,0]), "All rows must have 5 elements separated by a single space"
 
     # print the first 5 rows
-    print(crop_coords.head())
+    # print(crop_coords.head())
     # print the number of rows and columns
-    print(crop_coords.shape)
+    # print(crop_coords.shape)
 
     # Create empty lists for ID (key) and value (coordinates)
     keys = []
